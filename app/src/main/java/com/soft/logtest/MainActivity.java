@@ -97,13 +97,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void checkPermission() {
         //检查权限（NEED_PERMISSION）是否被授权 PackageManager.PERMISSION_GRANTED表示同意授权
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
                 != PackageManager.PERMISSION_GRANTED) {
             //用户已经拒绝过一次，再次弹出权限申请对话框需要给用户一个解释
-            if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission
-                    .WRITE_EXTERNAL_STORAGE)) {
-                Toast.makeText(this, "请开通相关权限，否则无法正常使用本应用！", Toast.LENGTH_SHORT).show();
-            }
+            ActivityCompat.requestPermissions(MainActivity.this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION},200);
         } else {
             Toast.makeText(this, "授权成功！", Toast.LENGTH_SHORT).show();
 

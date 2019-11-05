@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentActivity">
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/lly"
+        android:layout_gravity="start"
+        android:layout_width="200dp"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tv_text1"
+            android:text="直播1"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+        <TextView
+            android:id="@+id/tv_text2"
+            android:text="直播2"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+        <TextView
+            android:id="@+id/tv_text3"
+            android:text="直播3"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+        <TextView
+            android:id="@+id/tv_text4"
+            android:text="直播4"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>
