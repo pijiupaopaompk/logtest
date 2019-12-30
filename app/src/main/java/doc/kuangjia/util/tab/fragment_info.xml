@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.union.replytax.widget.DragRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/DragRelative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_searchbar" />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/padding_42"
+            android:background="@drawable/tab_bg"
+            app:tabIndicatorColor="@color/colorPrimary"
+            app:tabIndicatorHeight="2dp"
+            app:tabSelectedTextColor="@color/colorPrimary"
+            app:tabTextColor="@color/light_black" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+    <ImageButton
+        android:background="@null"
+        android:id="@+id/ivBtn"
+        android:src="@drawable/chat_service"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/padding_100"
+        android:layout_width="@dimen/padding_45"
+        android:layout_height="@dimen/padding_45"
+        />
+</com.union.replytax.widget.DragRelativeLayout>
